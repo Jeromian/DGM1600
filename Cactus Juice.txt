@@ -1,4 +1,1 @@
-"Drink cactus juice!"
-"It'll quench ya!"
-"Nothing quenchier!"
-"It's the quenchiest!"
+"Drink cactus juice! It'll quench ya! Nothing quenchier! It's the quenchiest!"
