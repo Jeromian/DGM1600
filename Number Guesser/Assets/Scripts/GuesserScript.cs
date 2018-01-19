@@ -7,7 +7,7 @@ public class GuesserScript : MonoBehaviour {
         public int max;
         public int min;
     public int Guess;
-        
+    public int count;
 
 	// Use this for initialization
 	private void Start () {
@@ -18,38 +18,61 @@ public class GuesserScript : MonoBehaviour {
         print("pick a number between "+min+" and "+max);
 
         //Is value Guess
-        print("is it "+Guess+"?");
+        NextGuess();
         //push buttons up/down
-        print("press the up button for higher, the down button for lower, or the Spacebar to confirm.");
-
+        print("press the up button for higher, the down button for lower, or the Enter key to confirm.");
        
+       max = max + 1;
+    }
+
+    private void NextGuess()
+    {
+        //Randomize Guess*********************************************************************************************************************************************************************************
+        count--;
+        Guess = (min + max) / 2;
+        print("Is it" + Guess);
+
     }
 	
 	// Update is called once per frame
 	public void Update () {
+
+        
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             min = Guess;
-            Guess = (min + max) / 2;
-            print("Is it" + Guess);
-
+            print("AGGHHH! FINE!");
+            NextGuess();
         }
 
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             max = Guess;
-            Guess = (min + max) / 2;
-            print("Is it" + Guess);
+            print("PSHH. BE THat WAY!");
+            NextGuess();
+
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.Return))
         {
             
-            print("HAHA I KNEW IT WAS " + Guess+"!");
+            print("Realy? Your number is " + Guess+"!");
+            if (Guess == 666)
+            {
+                print("You must not have any friends.");
+            }
 
+            else
+            {
+                print("I KNEW IT!");
+                
+            }
+
+            print("Play again?");
         }
-
+        //Human wins***************************************************************************************************************************************************************************************
     }
 }

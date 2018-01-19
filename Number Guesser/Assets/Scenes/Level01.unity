@@ -138,6 +138,7 @@ MonoBehaviour:
   max: 1000
   min: 1
   Guess: 500
+  count: 0
 --- !u!4 &150193088
 Transform:
   m_ObjectHideFlags: 0
