@@ -21,58 +21,69 @@ public class GuesserScript : MonoBehaviour {
         NextGuess();
         //push buttons up/down
         print("press the up button for higher, the down button for lower, or the Enter key to confirm.");
-       
+        count++;
        max = max + 1;
     }
 
     private void NextGuess()
     {
-        //Randomize Guess*********************************************************************************************************************************************************************************
+ 
         count--;
-        Guess = (min + max) / 2;
-        print("Is it" + Guess);
-
+        if (count > 0)
+        {
+            Guess = Random.Range(min, max);
+            print("Is it " + Guess);
+        }
     }
 	
 	// Update is called once per frame
 	public void Update () {
 
+        if (count == 0)
+        {
+            print("NOOOOOOOO! YOU WIN!");
+            count--;
+        }
+
+        else if (count > 0)
+        {
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                min = Guess;
+                print("AGGHHH! FINE!");
+                NextGuess();
+            }
+
+
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                max = Guess;
+                print("PSHH. BE THat WAY!");
+                NextGuess();
+
+
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Return))
+            {
+
+                print("Realy? Your number is " + Guess + "!");
+                if (Guess == 666)
+                {
+                    print("You must not have any friends.");
+                }
+
+                else
+                {
+                    print("I KNEW IT!");
+
+                }
+                count = -1;
+                print("Play again?");
+            }
+
+        }
         
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            min = Guess;
-            print("AGGHHH! FINE!");
-            NextGuess();
-        }
-
-
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            max = Guess;
-            print("PSHH. BE THat WAY!");
-            NextGuess();
-
-
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Return))
-        {
-            
-            print("Realy? Your number is " + Guess+"!");
-            if (Guess == 666)
-            {
-                print("You must not have any friends.");
-            }
-
-            else
-            {
-                print("I KNEW IT!");
-                
-            }
-
-            print("Play again?");
-        }
-        //Human wins***************************************************************************************************************************************************************************************
     }
 }
