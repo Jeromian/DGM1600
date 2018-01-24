@@ -80,7 +80,7 @@ public class GuesserScript : MonoBehaviour {
 
                 }
                 count = -1;
-                print("Play again?");
+                print("yup...");
             }
 
         }
