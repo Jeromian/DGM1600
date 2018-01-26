@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Adventure : MonoBehaviour {
 
-    public enum States { cell, window, door, bed, teddy, mattres, hall}
+    public enum States { cell, window, door, bed, teddy, mattres, hall, otherCell, body, left, right, rush, shank, pod, dead}
     public States currentState;
     public States lastState;
     public bool doorCode;
@@ -48,8 +48,55 @@ public class Adventure : MonoBehaviour {
             Teddybear();
         }
 
+		else if (currentState == States.mattres)
+		{
+			Mattres();
+		}
 
+		else if (currentState == States.hall)
+		{
+			Hall();
+		}
 
+		else if (currentState == States.otherCell)
+		{
+			OtherCell();
+		}
+
+		else if (currentState == States.body)
+		{
+			Body();
+		}
+
+		else if (currentState == States.left)
+		{
+			Left();
+		}
+
+		else if (currentState == States.right)
+		{
+			Right();
+		}
+
+		else if (currentState == States.rush)
+		{
+			Rush();
+		}
+
+		else if (currentState == States.shank)
+		{
+			Shank();
+		}
+
+		else if (currentState == States.pod)
+		{
+			Pod();
+		}
+
+		else if (currentState == States.dead)
+		{
+			Dead();
+		}
 
         lastState = currentState;
 	}
@@ -103,6 +150,75 @@ public class Adventure : MonoBehaviour {
         print("Press B to go back to the Bed");
         if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }
     }
+
+	private void Mattres()
+	{
+		print("This mattres is hard as as a rock! OH... It is a rock.\n " +
+			"Press B to go back to the Bed.");
+		if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }
+	}
+
+	private void Hall()
+	{
+		print("You're in a dimmly lit hall. You can go Left, Right, or enter the Other cell\n" +
+			"Press L for Left, R for Right, O for Other cell.");
+		if (Input.GetKeyDown(KeyCode.L)) { currentState = States.left; }
+		if (Input.GetKeyDown(KeyCode.R)) { currentState = States.right; }
+		if (Input.GetKeyDown(KeyCode.O)) { currentState = States.otherCell; }  
+	}
+
+	private void Left()
+	{
+		print("Oh look, an escape Pod. \n " +
+			"Press H to go back to the Hall, P to enter the escape Pod.");
+		if (Input.GetKeyDown(KeyCode.H)) { currentState = States.hall; }
+		if (Input.GetKeyDown(KeyCode.P)) {
+			if (podKey == true) currentState = States.pod;
+			else print("You dont have the key to open the escape Pod");
+		}
+
+	}
+
+	private void Right()
+	{
+		print("Theres an armed guard! But luckily his back is turned to you. \n " +
+			"Press S to go back to the Shank, R to enter the escape Rush.");
+		if (Input.GetKeyDown(KeyCode.R)) { currentState = States.rush; }
+		if (Input.GetKeyDown(KeyCode.S)) {
+			if (podKey == true) currentState = States.shank;
+			else print("You dont have anything to Shank him with.");
+		}
+
+	}
+
+	private void Rush()
+	{
+		print("He Shot you!\n " +
+			"72 times!");
+		currentState = States.dead;
+	}
+
+	private void Dead()
+	{
+		print("GameOver");
+	}
+
+	private void Shank()
+	{
+		print("HAHAHA! ");
+			podKey = true;
+		
+		print("Press B to go back to the Bed");
+		if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }
+	}
+
+
+
+
+
+}
+
+
 
 
 
