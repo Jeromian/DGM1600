@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Adventure : MonoBehaviour {
 
@@ -10,19 +11,26 @@ public class Adventure : MonoBehaviour {
     public bool doorCode;
     public bool shiv;
     public bool podKey;
+    public Text textObject;
+
+
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         currentState = States.cell;
         doorCode = false;
         shiv = false;
         podKey = false;
-
+        
     }
+
+
+    
 	
 	// Update is called once per frame
-	void Update () {
+	void Update() {
         if(currentState == States.cell)
         {
             Cell();
@@ -105,6 +113,8 @@ public class Adventure : MonoBehaviour {
     {
         print("You are in a tiny white sanitary well lit room with padded walls.\n" +
             "Press W for Window, D for Door, B for Bed.");
+        textObject.text = "You are in a tiny white sanitary well lit room with padded walls.\n" +
+            "Press W for Window, D for Door, B for Bed.";
         if (Input.GetKeyDown(KeyCode.W)) { currentState = States.window; }
         if (Input.GetKeyDown(KeyCode.D)) { currentState = States.door; }
         if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }  
@@ -115,6 +125,9 @@ public class Adventure : MonoBehaviour {
         print("You look out the window and see twinkling stars and the planet down below you. " +
             "You feel as if the cold heart of space is staring at you.\n" +
             "Press C to go back to the Cell");
+        textObject.text = "You look out the window and see twinkling stars and the planet down below you. " +
+            "You feel as if the cold heart of space is staring at you.\n" +
+            "Press C to go back to the Cell";
         if (Input.GetKeyDown(KeyCode.C)) { currentState = States.cell; }
     }
 
@@ -122,6 +135,8 @@ public class Adventure : MonoBehaviour {
     {
         print("Your bed is ready-made with a cute little Teddybear sitting on top of the Mattres.\n " +
             "Press C to go back to the Cell, T to search the Teddybear, M to search the Mattres.");
+        textObject.text = "Your bed is ready-made with a cute little Teddybear sitting on top of the Mattres.\n " +
+            "Press C to go back to the Cell, T to search the Teddybear, M to search the Mattres.";
         if (Input.GetKeyDown(KeyCode.C)) { currentState = States.cell; }
         if (Input.GetKeyDown(KeyCode.T)) { currentState = States.teddy; }
         if (Input.GetKeyDown(KeyCode.M)) { currentState = States.mattres; }
@@ -131,10 +146,16 @@ public class Adventure : MonoBehaviour {
     {
         print("The Door is solid iron with a small keypad over on one side. \n " +
             "Press C to go back to the Cell, K to use Keypad.");
+        textObject.text = "The Door is solid iron with a small keypad over on one side. \n " +
+            "Press C to go back to the Cell, K to use Keypad.";
         if (Input.GetKeyDown(KeyCode.C)) { currentState = States.cell; }
         if (Input.GetKeyDown(KeyCode.K)) {
             if (doorCode == true) currentState = States.hall;
-            else print("You dont have the code to open the Door");
+            else
+            {
+                print("You dont have the CODE to open the Door");
+                textObject.text = "You dont have the CODE to open the Door";
+            }
         }
         
     }
@@ -205,22 +226,37 @@ public class Adventure : MonoBehaviour {
 
 	private void Shank()
 	{
-		print("HAHAHA! ");
+		print("HAHAHA! YOU GOT HIS POD KEY! ");
 			podKey = true;
 		
-		print("Press B to go back to the Bed");
+		print("Press H to go back to the Hall");
 		if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }
 	}
 
+    private void OtherCell()
+    {
+        print("This cell is nearly identical to your own, but it's completely empty. Oh! Theres a dead Body in the middle of the floor!");
+        print("Press B to check the Body, H to go back to the Hall");
+        if (Input.GetKeyDown(KeyCode.B)) { currentState = States.body; }
+        if (Input.GetKeyDown(KeyCode.H)) { currentState = States.hall; }
+    }
 
+    private void Body()
+    {
+        print("EEWWWW! This guy's been dead  for a while!");
+        if (shiv == false)
+        {
+            print("OH!... YOU FOUND A SHIV in his ribcage. That's probably why he's dead.");
+            shiv = true;
+        }
+        print("Press O to go back to the Other cell");
+        if (Input.GetKeyDown(KeyCode.O)) { currentState = States.otherCell; }
+    }
 
-
+    private void Pod()
+    {
+        print("YOU ESCAPED!");
+    }
 
 }
 
-
-
-
-
-
-}
