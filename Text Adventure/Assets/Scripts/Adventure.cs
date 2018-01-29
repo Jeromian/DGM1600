@@ -13,6 +13,7 @@ public class Adventure : MonoBehaviour {
     public bool podKey;
     public Text textObject;
 	public Text itemText;
+    public Text title;
 
 
 
@@ -34,89 +35,111 @@ public class Adventure : MonoBehaviour {
 	void Update() {
         if(currentState == States.cell)
         {
+            title.text = ("CELL");
             Cell();
-			itemText.text = " ";
+            if (doorCode) itemText.text = "You have the DOORCODE";
+            else itemText.text = " ";
         }
 
         else if (currentState == States.window)
         {
+            title.text = ("WINDOW");
             Window();
         }
 
         else if (currentState == States.bed)
         {
+            title.text = ("BED");
             Bed();
-			itemText.text = " ";
+            if (doorCode) itemText.text = "You have the DOORCODE";
+            else itemText.text = " ";
         }
 
         else if (currentState == States.door)
         {
+            title.text = ("Door");
             Door();
         }
 
         else if (currentState == States.teddy)
         {
+            title.text = ("MR. FLUFFS");
             Teddybear();
         }
 
 		else if (currentState == States.mattres)
 		{
-			Mattres();
+            title.text = ("MATTRES");
+            Mattres();
 		}
 
 		else if (currentState == States.hall)
 		{
-			Hall();
-			itemText.text = " ";
-		}
+            title.text = ("HALL");
+            Hall();
+            if (podKey) itemText.text = "You have the PODKEY";
+            else if (shiv) itemText.text = "You have a SHIV";
+            else itemText.text = " ";
+        }
 
 		else if (currentState == States.otherCell)
 		{
-			OtherCell();
-			itemText.text = " ";
-		}
+            title.text = ("OTHER CELL");
+            OtherCell();
+            if (shiv) itemText.text = "You have a SHIV";
+            else itemText.text = " ";
+        }
 
 		else if (currentState == States.body)
 		{
-			Body();
+            title.text = ("BODY");
+            Body();
 		}
 
 		else if (currentState == States.left)
 		{
-			Left();
+            title.text = ("LEFT");
+            Left();
 		}
 
 		else if (currentState == States.right)
 		{
-			Right();
+            title.text = ("RIGHT");
+            Right();
 		}
 
 		else if (currentState == States.rush)
 		{
-			Rush();
+            title.text = ("RUSH");
+            Rush();
+            itemText.text = " ";
 		}
 
 		else if (currentState == States.shank)
 		{
-			Shank();
+            title.text = ("MURDER!");
+            Shank();
 		}
 
 		else if (currentState == States.pod)
 		{
-			Pod();
-		}
+            title.text = (" ");
+            Pod();
+            itemText.text = " ";
+        }
 
 		else if (currentState == States.dead)
 		{
-			Dead();
-		}
+            title.text = (" ");
+            Dead();
+        }
 
         lastState = currentState;
 	}
 
     private void Cell()
     {
-        print("You are in a tiny white sanitary well lit room with padded walls.\n" +
+        print("You are in a tiny white steril well lit room with padded walls.\n" +
             "Press W for Window, D for Door, B for Bed.");
         textObject.text = "You are in a tiny white sanitary well lit room with padded walls.\n" +
             "Press W for Window, D for Door, B for Bed.";
@@ -168,7 +191,7 @@ public class Adventure : MonoBehaviour {
     private void Teddybear()
     {
         print("The Teddybear is wearing a cute little labcoat and has a small tear in its neck.");
-		textObject.text = "The Teddybear is wearing a cute little labcoat and has a small tear in its neck. /n" +
+		textObject.text = "The Teddybear is wearing a cute little labcoat and has a small tear in its neck. \n" +
 			"Press B to go back to the Bed";
 
         if(doorCode == false)
@@ -221,18 +244,30 @@ public class Adventure : MonoBehaviour {
 
 	private void Right()
 	{
-		print("Theres an armed guard! But luckily his back is turned to you. \n " +
-			"Press S to go back to the Shank, R to enter the escape Rush.");
-		textObject.text = "Theres an armed guard! But luckily his back is turned to you. \n " +
-		"Press S to Shank him, R to Rush him, H to go back to the Hall.";
-		
-		if (Input.GetKeyDown(KeyCode.R)) { currentState = States.rush; }
-		if (Input.GetKeyDown(KeyCode.H)) { currentState = States.hall; }
-		if (Input.GetKeyDown(KeyCode.S)) {
-			if (shiv == true) currentState = States.shank;
-			else print("You dont have anything to Shank him with.");
-			itemText.text = "You dont have anything to Shank him with.";
-		}
+        if (podKey==false)
+        {
+            print("Theres an armed guard! But luckily his back is turned to you. \n " +
+                "Press S to go back to the Shank, R to enter the escape Rush.");
+            textObject.text = "Theres an armed guard! But luckily his back is turned to you. \n " +
+            "Press S to Shank him, R to Rush him, H to go back to the Hall.";
+
+            if (Input.GetKeyDown(KeyCode.R)) { currentState = States.rush; }
+            if (Input.GetKeyDown(KeyCode.H)) { currentState = States.hall; }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                if (shiv == true) currentState = States.shank;
+                else print("You dont have anything to Shank him with.");
+                itemText.text = "You dont have anything to Shank him with.";
+            }
+
+        }
+
+        else
+        {
+            textObject.text = "Theres that dead guard. Yup... Why are you still standing here? \n " +
+            "Press H to go back to the Hall.";
+            if (Input.GetKeyDown(KeyCode.H)) { currentState = States.hall; }
+        }
 
 	}
 
