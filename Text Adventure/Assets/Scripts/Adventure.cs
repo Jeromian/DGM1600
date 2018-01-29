@@ -141,8 +141,8 @@ public class Adventure : MonoBehaviour {
     {
         print("You are in a tiny white steril well lit room with padded walls.\n" +
             "Press W for Window, D for Door, B for Bed.");
-        textObject.text = "You are in a tiny white sanitary well lit room with padded walls.\n" +
-            "Press W for Window, D for Door, B for Bed.";
+        textObject.text = "You are in a tiny white steril well lit room with padded walls.\n" +
+            "Press W to check the Window, D to check Door, B to check the Bed.";
         if (Input.GetKeyDown(KeyCode.W)) { currentState = States.window; }
         if (Input.GetKeyDown(KeyCode.D)) { currentState = States.door; }
         if (Input.GetKeyDown(KeyCode.B)) { currentState = States.bed; }  
