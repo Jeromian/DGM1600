@@ -86,7 +86,8 @@ public class Adventure : MonoBehaviour {
 		{
             title.text = ("OTHER CELL");
             OtherCell();
-            if (shiv) itemText.text = "You have a SHIV";
+            if (podKey) itemText.text = "You have the PODKEY";
+            else if (shiv) itemText.text = "You have a SHIV";
             else itemText.text = " ";
         }
 
