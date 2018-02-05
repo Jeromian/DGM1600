@@ -167,7 +167,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.16604222, g: 0.8235294, b: 0.0787197, a: 1}
     m_PressedColor: {r: 0.092128, g: 0.41911763, b: 0.049307954, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4705882, g: 0.4705882, b: 0.4705882, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -230,6 +230,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360136580}
+--- !u!1 &404977095 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1827601850077572, guid: c20d943b2c73fba43a2403ba46346c64,
+    type: 2}
+  m_PrefabInternal: {fileID: 894016723}
+--- !u!114 &404977098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404977095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b7d46aa8bff474e85c934842b8186c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413326349
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +468,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.88235295, g: 0.07785469, b: 0.07785469, a: 1}
     m_PressedColor: {r: 0.49264705, g: 0.02535683, b: 0.02535683, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5147059, g: 0.5147059, b: 0.5147059, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -613,7 +629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: tear down that wall
+  m_Text: Tear down That wall
 --- !u!222 &962489076
 CanvasRenderer:
   m_ObjectHideFlags: 0
