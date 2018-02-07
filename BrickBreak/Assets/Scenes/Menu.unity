@@ -629,7 +629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tear down That wall
+  m_Text: The Brick Break Revelution
 --- !u!222 &962489076
 CanvasRenderer:
   m_ObjectHideFlags: 0
