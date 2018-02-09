@@ -369,7 +369,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.44852942, g: 0.43761188, b: 0.3495891, a: 0}
+  m_BackGroundColor: {r: 0.6397059, g: 0.5691177, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Brick Break Revelution
+  m_Text: The Bricktober Revelution
 --- !u!222 &962489076
 CanvasRenderer:
   m_ObjectHideFlags: 0
