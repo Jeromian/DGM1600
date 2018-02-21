@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry?
+  m_Text: Again?
 --- !u!222 &413326352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.36764705, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.31323552, g: 0, b: 0.6397059, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -558,7 +558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4729706158891546, guid: 5024d9d8f6ecfa549a350c7c2c90b538, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5024d9d8f6ecfa549a350c7c2c90b538, type: 2}
@@ -600,7 +600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512609837150600, guid: c20d943b2c73fba43a2403ba46346c64, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c20d943b2c73fba43a2403ba46346c64, type: 2}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.14176036, g: 0.83823526, b: 0.26184225, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -672,7 +672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Revolution Over
+  m_Text: Revolution Accomplished
 --- !u!222 &962489076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -768,7 +768,7 @@ RectTransform:
   - {fileID: 360136581}
   - {fileID: 564174447}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -909,5 +909,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
