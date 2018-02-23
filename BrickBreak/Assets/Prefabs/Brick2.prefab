@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4921737649767286}
   - component: {fileID: 212210996523842970}
   - component: {fileID: 61123882518500852}
-  - component: {fileID: 114390836810107756}
+  - component: {fileID: 114781740738495124}
   m_Layer: 8
   m_Name: Brick2
   m_TagString: Untagged
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &114390836810107756
+--- !u!114 &114781740738495124
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,8 +79,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  sprite1: {fileID: 21300004, guid: bd8d931f411be4b419db39fecaf912f3, type: 3}
-  sprite2: {fileID: 21300004, guid: bd8d931f411be4b419db39fecaf912f3, type: 3}
+  sprites:
+  - {fileID: 21300000, guid: bd8d931f411be4b419db39fecaf912f3, type: 3}
+  - {fileID: 21300004, guid: bd8d931f411be4b419db39fecaf912f3, type: 3}
+  - {fileID: 21300000, guid: bd8d931f411be4b419db39fecaf912f3, type: 3}
 --- !u!212 &212210996523842970
 SpriteRenderer:
   m_ObjectHideFlags: 1

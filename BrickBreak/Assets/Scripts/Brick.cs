@@ -2,37 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour {
+public class Brick : MonoBehaviour {
 
     public int health;
-    private int totalHealth;
-    public Sprite sprite1;
-    public Sprite sprite2;
+    public Sprite[] sprites;
     private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
-            spriteRenderer.sprite = sprite1;
+            spriteRenderer.sprite = sprites[0];
     }
 
     private void Awake()
     {
         GameManager.brickCount++;
         print(GameManager.brickCount);
-        totalHealth = health;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         health--;
+        GetComponent<SpriteRenderer>().sprite = sprites[health];
 
-        if (health<=totalHealth/2)
-        {
-            ChangeSprite();
-            print("HALF");
-            
-        }
+        
         //if health is 0 then destroy
         if (health <= 0)
         {
@@ -46,16 +40,6 @@ public class Health : MonoBehaviour {
         }
     }
 
-    void ChangeSprite()
-    {
-        if (spriteRenderer.sprite == sprite1)
-        {
-            spriteRenderer.sprite = sprite2;
-        }
-        else
-        {
-            spriteRenderer.sprite = sprite1;
-        }
-    }
+    
 
 }
