@@ -6,6 +6,16 @@ public class Health : MonoBehaviour {
 
     public int health;
     private int totalHealth;
+    public Sprite sprite1;
+    public Sprite sprite2;
+    private SpriteRenderer spriteRenderer;
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite == null)
+            spriteRenderer.sprite = sprite1;
+    }
 
     private void Awake()
     {
@@ -19,6 +29,7 @@ public class Health : MonoBehaviour {
 
         if (health<=totalHealth/2)
         {
+            ChangeSprite();
             print("HALF");
             
         }
@@ -34,5 +45,17 @@ public class Health : MonoBehaviour {
             }
         }
     }
-	
+
+    void ChangeSprite()
+    {
+        if (spriteRenderer.sprite == sprite1)
+        {
+            spriteRenderer.sprite = sprite2;
+        }
+        else
+        {
+            spriteRenderer.sprite = sprite1;
+        }
+    }
+
 }
