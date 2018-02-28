@@ -24,7 +24,7 @@ public class Paddle : MonoBehaviour {
         else
         {
         //get mouse position
-        float mousePositionX = (Input.mousePosition.x / Screen.width * 16)-10;
+        float mousePositionX = (Input.mousePosition.x / Screen.width * 16)-8;
         //convert mouse position to world space
         //save new position
         paddlePosition.x = mousePositionX;

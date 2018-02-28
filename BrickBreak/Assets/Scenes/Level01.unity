@@ -281,6 +281,14 @@ Prefab:
       propertyPath: m_Name
       value: Brick1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4989309172527382, guid: d8f29bf947cc58647a903930dea4068e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989309172527382, guid: d8f29bf947cc58647a903930dea4068e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8f29bf947cc58647a903930dea4068e, type: 2}
   m_IsPrefabParent: 0
@@ -343,7 +351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4804922072808692, guid: 28945704c096df04882732bdafa696bc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 4804922072808692, guid: 28945704c096df04882732bdafa696bc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -368,16 +376,6 @@ Prefab:
     - target: {fileID: 4804922072808692, guid: 28945704c096df04882732bdafa696bc, type: 2}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 60713473129094114, guid: 28945704c096df04882732bdafa696bc,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114176827177585434, guid: 28945704c096df04882732bdafa696bc,
-        type: 2}
-      propertyPath: autoPlay
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28945704c096df04882732bdafa696bc, type: 2}
@@ -620,10 +618,6 @@ Prefab:
       propertyPath: m_Name
       value: Brick2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4921737649767286, guid: 0287f492efa7da844b3692dad71cd3a4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0287f492efa7da844b3692dad71cd3a4, type: 2}
   m_IsPrefabParent: 0
@@ -781,7 +775,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0.9464503, b: 0.5147059, a: 0}
+  m_BackGroundColor: {r: 0.33823532, g: 0.059688583, b: 0.059688583, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

@@ -297,7 +297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4804922072808692, guid: 28945704c096df04882732bdafa696bc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 4804922072808692, guid: 28945704c096df04882732bdafa696bc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -345,11 +345,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4149860908299132, guid: bf1baa9167e06a54d9dc5c496482864e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.01
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4149860908299132, guid: bf1baa9167e06a54d9dc5c496482864e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.07
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 4149860908299132, guid: bf1baa9167e06a54d9dc5c496482864e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -483,11 +483,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4921737649767286, guid: 0287f492efa7da844b3692dad71cd3a4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.06
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 4921737649767286, guid: 0287f492efa7da844b3692dad71cd3a4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.35
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4921737649767286, guid: 0287f492efa7da844b3692dad71cd3a4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -643,6 +643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitSound: {fileID: 8300000, guid: 16ed551469ad0c543a69d7b52a380dd1, type: 3}
+  startVector: {x: 0, y: 0}
 --- !u!1 &1697483824 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1425800939397732, guid: 728d64645656cb2478fee3c261ad4727,
@@ -709,7 +710,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0.9464503, b: 0.5147059, a: 0}
+  m_BackGroundColor: {r: 0.44852942, g: 0.30341697, b: 0.30341697, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -837,31 +838,6 @@ Prefab:
     - target: {fileID: 1703189183358996, guid: d8f29bf947cc58647a903930dea4068e, type: 2}
       propertyPath: m_Name
       value: Brick (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 212230206060796094, guid: d8f29bf947cc58647a903930dea4068e,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212230206060796094, guid: d8f29bf947cc58647a903930dea4068e,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212230206060796094, guid: d8f29bf947cc58647a903930dea4068e,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.11724138
-      objectReference: {fileID: 0}
-    - target: {fileID: 212230206060796094, guid: d8f29bf947cc58647a903930dea4068e,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212230206060796094, guid: d8f29bf947cc58647a903930dea4068e,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8f29bf947cc58647a903930dea4068e, type: 2}

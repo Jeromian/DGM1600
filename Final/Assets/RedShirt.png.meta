@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: ad53511716ce5844f8aea4e163c77793
+timeCreated: 1519836993
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: front1
+    21300002: front2
+    21300004: front3
+    21300006: front4
+    21300008: front5
+    21300010: front6
+    21300012: front7
+    21300014: front8
+    21300016: back1
+    21300018: back2
+    21300020: back3
+    21300022: back4
+    21300024: back5
+    21300026: back6
+    21300028: back7
+    21300030: back8
+    21300032: side1
+    21300034: side2
+    21300036: side3
+    21300038: side4
+    21300040: side5
+    21300042: side6
+    21300044: side7
+    21300046: side8
+    21300048: frontDiag1
+    21300050: frontDiag2
+    21300052: frontDiag3
+    21300054: frontDiag4
+    21300056: frontDiag5
+    21300058: frontDiag6
+    21300060: frontDiag7
+    21300062: frontDiag8
+    21300064: backtDiag1
+    21300066: backtDiag2
+    21300068: backtDiag3
+    21300070: backtDiag4
+    21300072: backtDiag5
+    21300074: backtDiag6
+    21300076: backtDiag7
+    21300078: backtDiag8
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: front1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 98
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: side8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 83
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: frontDiag8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 68
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: backtDiag8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 53
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -62, y: 64}
+      - {x: -62, y: -6}
+      - {x: -61, y: -12}
+      - {x: -52, y: -12}
+      - {x: -51, y: -11}
+      - {x: -51, y: 64}
+    - - {x: -47, y: 64}
+      - {x: -47, y: -11}
+      - {x: -46, y: -12}
+      - {x: -39, y: -12}
+      - {x: -36, y: -11}
+      - {x: -36, y: 64}
+    - - {x: -30, y: 64}
+      - {x: -32, y: 61}
+      - {x: -32, y: -11}
+      - {x: -29, y: -12}
+      - {x: -22, y: -12}
+      - {x: -21, y: -9}
+      - {x: -21, y: 60}
+      - {x: -23, y: 64}
+    - - {x: -17, y: 64}
+      - {x: -17, y: -11}
+      - {x: -14, y: -12}
+      - {x: -6, y: -12}
+      - {x: -6, y: 64}
+    - - {x: -2, y: 64}
+      - {x: -2, y: -4}
+      - {x: 0, y: -12}
+      - {x: 9, y: -12}
+      - {x: 9, y: 64}
+    - - {x: 14, y: 64}
+      - {x: 13, y: 62}
+      - {x: 13, y: -11}
+      - {x: 14, y: -12}
+      - {x: 24, y: -12}
+      - {x: 24, y: 64}
+    - - {x: 30, y: 64}
+      - {x: 28, y: 61}
+      - {x: 28, y: -12}
+      - {x: 38, y: -12}
+      - {x: 39, y: 4}
+      - {x: 39, y: 62}
+      - {x: 38, y: 64}
+    - - {x: 45, y: 64}
+      - {x: 43, y: 60}
+      - {x: 43, y: -10}
+      - {x: 46, y: -12}
+      - {x: 54, y: -12}
+      - {x: 54, y: 64}
+    physicsShape:
+    - - {x: -62, y: 64}
+      - {x: -62, y: 5}
+      - {x: -61, y: -11}
+      - {x: -58, y: -12}
+      - {x: -54, y: -12}
+      - {x: -51, y: -6}
+      - {x: -51, y: 62}
+      - {x: -52, y: 64}
+    - - {x: -36, y: 64}
+      - {x: -46, y: 64}
+      - {x: -47, y: 60}
+      - {x: -47, y: 35}
+      - {x: -45, y: 23}
+      - {x: -46, y: 18}
+      - {x: -47, y: -3}
+      - {x: -45, y: -10}
+      - {x: -44, y: -12}
+      - {x: -39, y: -12}
+      - {x: -36, y: -11}
+      - {x: -36, y: 4}
+      - {x: -37, y: 18}
+      - {x: -36, y: 42}
+    - - {x: -21, y: 11}
+      - {x: -21, y: 56}
+      - {x: -22, y: 62}
+      - {x: -24, y: 64}
+      - {x: -30, y: 64}
+      - {x: -32, y: 60}
+      - {x: -32, y: 37}
+      - {x: -31, y: 32}
+      - {x: -31, y: -10}
+      - {x: -29, y: -12}
+      - {x: -23, y: -12}
+      - {x: -21, y: -8}
+      - {x: -21, y: -1}
+      - {x: -22, y: 2}
+    - - {x: -6, y: 63}
+      - {x: -7, y: 64}
+      - {x: -14, y: 64}
+      - {x: -17, y: 63}
+      - {x: -17, y: 31}
+      - {x: -16, y: 17}
+      - {x: -17, y: 3}
+      - {x: -17, y: 2}
+      - {x: -16, y: -9}
+      - {x: -13, y: -12}
+      - {x: -10, y: -12}
+      - {x: -7, y: -11}
+      - {x: -7, y: 35}
+      - {x: -6, y: 38}
+    - - {x: 8, y: 64}
+      - {x: -2, y: 64}
+      - {x: -2, y: -1}
+      - {x: 0, y: -12}
+      - {x: 6, y: -12}
+      - {x: 7, y: -11}
+      - {x: 8, y: 3}
+      - {x: 9, y: 8}
+      - {x: 9, y: 63}
+    - - {x: 24, y: 42}
+      - {x: 24, y: 61}
+      - {x: 23, y: 64}
+      - {x: 14, y: 64}
+      - {x: 13, y: 62}
+      - {x: 13, y: 6}
+      - {x: 14, y: -11}
+      - {x: 16, y: -12}
+      - {x: 22, y: -12}
+      - {x: 22, y: -11}
+      - {x: 23, y: 4}
+      - {x: 23, y: 18}
+    - - {x: 39, y: 56}
+      - {x: 38, y: 62}
+      - {x: 36, y: 64}
+      - {x: 30, y: 64}
+      - {x: 28, y: 60}
+      - {x: 28, y: 52}
+      - {x: 29, y: 50}
+      - {x: 28, y: 41}
+      - {x: 28, y: 38}
+      - {x: 31, y: 35}
+      - {x: 29, y: 33}
+      - {x: 29, y: -3}
+      - {x: 28, y: -7}
+      - {x: 28, y: -11}
+      - {x: 30, y: -12}
+      - {x: 37, y: -12}
+      - {x: 38, y: -10}
+      - {x: 38, y: 32}
+      - {x: 39, y: 41}
+    - - {x: 54, y: 35}
+      - {x: 54, y: 64}
+      - {x: 45, y: 64}
+      - {x: 43, y: 60}
+      - {x: 43, y: 36}
+      - {x: 45, y: 21}
+      - {x: 43, y: 18}
+      - {x: 43, y: -10}
+      - {x: 47, y: -12}
+      - {x: 52, y: -12}
+      - {x: 54, y: -1}
+      - {x: 54, y: 17}
+      - {x: 53, y: 32}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
