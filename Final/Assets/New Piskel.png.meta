@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: e8a491552b9de974c8772a1269065dbb
-timeCreated: 1520009657
+timeCreated: 1520444289
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: Gem
     21300002: pot
+    21300004: Gem_Shine1
+    21300006: Gem_Shine2
+    21300008: Gem_Shine3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -117,7 +120,7 @@ TextureImporter:
         width: 9
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,6 +133,48 @@ TextureImporter:
         y: 18
         width: 30
         height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gem_Shine1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 66
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gem_Shine2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 66
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gem_Shine3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 66
+        width: 9
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
