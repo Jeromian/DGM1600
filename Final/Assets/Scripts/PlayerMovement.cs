@@ -36,5 +36,10 @@ public class PlayerMovement : MonoBehaviour {
             rend.flipX = false;
         }
 
+        if (Input.GetButton("Fire1"))
+        {
+            anim.SetTrigger("ShootGo");
+        }
+
 	}
 }
