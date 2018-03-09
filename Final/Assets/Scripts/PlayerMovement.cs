@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour {
     public float speed;
     private Animator anim;
     private SpriteRenderer rend;
+    public float jump;
+    private bool isGrounded;
 
 	// Use this for initialization
 	void Start () {
@@ -41,5 +43,27 @@ public class PlayerMovement : MonoBehaviour {
             anim.SetTrigger("ShootGo");
         }
 
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            rigid.AddForce(new Vector2(0, jump), ForceMode2D.Force);
+        }
+
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+    }
+
 }
