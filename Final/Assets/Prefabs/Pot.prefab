@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212489468430450352}
   - component: {fileID: 70738544019569316}
   - component: {fileID: 50795931088822844}
+  - component: {fileID: 114017312639223464}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602904262840496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.63, y: -3.06, z: 0}
+  m_LocalPosition: {x: 6.5, y: 0.45, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +76,22 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 0.25}
+  m_Size: {x: 0.26, y: 0.27}
   m_Direction: 0
+--- !u!114 &114017312639223464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602904262840496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e330770ebafa86d46952c5346a16e42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  deathParticle: {fileID: 198697708742009206, guid: 3b3aba55c279bf84f863c089726adcc4,
+    type: 2}
 --- !u!212 &212489468430450352
 SpriteRenderer:
   m_ObjectHideFlags: 1
