@@ -24,7 +24,7 @@ public class Health : MonoBehaviour {
 
         if (health <= 0)
         {
-        Instantiate(deathParticle);
+        Instantiate(deathParticle, gameObject.transform.position,Quaternion.identity);
         Destroy(gameObject);
         }
 
