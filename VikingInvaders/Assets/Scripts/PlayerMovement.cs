@@ -13,16 +13,20 @@ public class PlayerMovement : MonoBehaviour {
     private SpriteRenderer rend;
     public float jump;
     private bool isGrounded;
+    public GameObject ammo;
+    private int count;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    
+
+    void Update () {
         //check for button pushes
 
         rigid.AddForce(new Vector2(Input.GetAxis("Horizontal")*speed, 0));
@@ -38,32 +42,16 @@ public class PlayerMovement : MonoBehaviour {
             rend.flipX = false;
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1")&count>5)
         {
-            anim.SetTrigger("ShootGo");
+            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+            count = 0;
         }
 
-        if (isGrounded && Input.GetButtonDown("Jump"))
-        {
-            rigid.AddForce(new Vector2(0, jump), ForceMode2D.Force);
-        }
+        count++;
 
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.transform.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
+    
 
 }
