@@ -20,7 +20,10 @@ public class Health : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //if its a cannon ball
         health--;
+
+        //else do nothing 
 
         if (health <= 0)
         {

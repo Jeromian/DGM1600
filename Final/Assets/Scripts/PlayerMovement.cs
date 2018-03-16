@@ -43,9 +43,24 @@ public class PlayerMovement : MonoBehaviour {
             anim.SetTrigger("ShootGo");
         }
 
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            rigid.AddForce(new Vector2(0, jump), ForceMode2D.Force);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,1f,9);
+            if (hit.collider.tag == "Ground")
+            {
+                isGrounded = true;
+                Debug.Log("Found Ground");
+            }
+            else
+            {
+                isGrounded = false;
+                Debug.Log("No Ground");
+            }
+
+            if (isGrounded)
+            {
+                rigid.AddForce(new Vector2(0, jump), ForceMode2D.Force);
+            }
         }
 
 	}

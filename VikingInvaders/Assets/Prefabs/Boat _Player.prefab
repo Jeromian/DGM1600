@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4286236885168992}
   - component: {fileID: 212646268283867658}
   - component: {fileID: 95597784973585244}
+  - component: {fileID: 114452682816318340}
   - component: {fileID: 114544351338621112}
   - component: {fileID: 70160796245553256}
   - component: {fileID: 50221261261270974}
@@ -96,6 +97,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114452682816318340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529499069307024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a2d3cdc1ed8d5418d709503b96dbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  deathParticle: {fileID: 0}
 --- !u!114 &114544351338621112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jump: 0
+  ammo: {fileID: 0}
 --- !u!212 &212646268283867658
 SpriteRenderer:
   m_ObjectHideFlags: 1
