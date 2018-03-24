@@ -42,15 +42,15 @@ public class PlayerMovement : MonoBehaviour {
             rend.flipX = false;
         }
 
-        if (Input.GetButton("Fire1")&count>15)
+        if (Input.GetButton("Fire1")&count>35)
         {
             Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
             count = 0;
         }
 
         count++;
-
-	}
+        
+    }
 
     
 

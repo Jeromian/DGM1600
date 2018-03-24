@@ -30,12 +30,12 @@ public class EnemyMovement : MonoBehaviour {
         {
             rigid.AddForce(new Vector2(-1*speed, 0));
         }
-        else
+       /* else
         {
             centralPosition.x = player.transform.position.x;
             
             this.gameObject.transform.position = centralPosition;
-        }
+        }*/
 
         if (count > 130)
         {
