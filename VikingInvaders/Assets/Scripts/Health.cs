@@ -52,7 +52,7 @@ public class Health : MonoBehaviour {
             }
             if (isPlayer)
             {
-                FindObjectOfType<GameManager>().LoadLevel("Loose");
+                FindObjectOfType<GameManager>().LoadLevel("Lose");
             }
         }
 

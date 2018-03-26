@@ -1,0 +1,122 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro K2000 (ID=0xffe)
+    Vendor:   NVIDIA
+    VRAM:     1989 MB
+    Driver:   10.18.13.5467
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\10661188\Desktop\DGM1600\TheBricktoberRevolution_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.093 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.574910 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.391540 ms
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 366.
+Total: 0.363724 ms (FindLiveObjects: 0.036454 ms CreateObjectMapping: 0.021708 ms MarkObjects: 0.275250 ms  DeleteObjects: 0.029081 ms)
+
+8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+GAME OVER
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.398130 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 328.
+Total: 0.480869 ms (FindLiveObjects: 0.029900 ms CreateObjectMapping: 0.014745 ms MarkObjects: 0.224460 ms  DeleteObjects: 0.210943 ms)
+
+Quit Game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 7184 -> priority: 1 
+  Thread -> id: 717c -> priority: 1 
+  Thread -> id: 7164 -> priority: 1 
+  Thread -> id: 7180 -> priority: 1 
