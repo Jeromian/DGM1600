@@ -8,7 +8,8 @@ public class Health : MonoBehaviour {
     public ParticleSystem deathParticle;
     public bool isCannonBalled;
     public bool isPlayer;
-
+    public bool colourChangeCollision = false;
+    public float count;
     private void Awake()
     {
         if (!isPlayer)
@@ -21,6 +22,8 @@ public class Health : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+
         if (collision.transform.tag == "CannonBall")
         {
             isCannonBalled = true;
@@ -34,6 +37,11 @@ public class Health : MonoBehaviour {
         if (isCannonBalled)
         {
             health--;
+
+            if (this.transform.tag != "CannonBall")
+            {
+                colourChangeCollision = true;
+            }
         }
 
         else if(this.tag == "CannonBall")
@@ -52,9 +60,30 @@ public class Health : MonoBehaviour {
             }
             if (isPlayer)
             {
-                FindObjectOfType<GameManager>().LoadLevel("Lose");
+                FindObjectOfType<GameManager>().LoadLevel("Loose");
             }
         }
 
+    }
+
+    private void Update()
+    {
+        HitColor();
+    }
+
+    private void HitColor()
+    {
+        if (colourChangeCollision)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.red;
+        }
+        
+        if (count > 20)
+        {
+            transform.GetComponent<Renderer>().material.color = Color.white;
+            colourChangeCollision = false;
+            count = 0;
+        }
+        count++;
     }
 }
