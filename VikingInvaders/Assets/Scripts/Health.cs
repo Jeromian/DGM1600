@@ -50,6 +50,10 @@ public class Health : MonoBehaviour {
             {
                 FindObjectOfType<GameManager>().LoadNextLevel();
             }
+            if (isPlayer)
+            {
+                FindObjectOfType<GameManager>().LoadLevel("Loose");
+            }
         }
 
     }
