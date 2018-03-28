@@ -110,8 +110,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   deathParticle: {fileID: 0}
+  deathReward: {fileID: 0}
   isCannonBalled: 0
   isPlayer: 0
+  colourChangeCollision: 0
+  count: 0
+  healthText: {fileID: 0}
 --- !u!114 &114982036376590386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 5091d6d6026e02c47bd6aa15148b0405, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

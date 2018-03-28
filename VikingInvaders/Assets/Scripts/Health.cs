@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
     public int health;
     public ParticleSystem deathParticle;
+    public GameObject deathReward;
     public bool isCannonBalled;
     public bool isPlayer;
     public bool colourChangeCollision = false;
     public float count;
+    public Text healthText;
     private void Awake()
     {
         if (!isPlayer)
@@ -51,7 +54,11 @@ public class Health : MonoBehaviour {
         
         if (health <= 0)
         {
-        //Instantiate(deathParticle, gameObject.transform.position,Quaternion.identity);
+            //Instantiate(deathParticle, gameObject.transform.position,Quaternion.identity);
+            if (deathReward != null)
+            {
+                Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+            }
         Destroy(gameObject);
             GameManager.vikingCount--;
             if (GameManager.vikingCount == 0)
@@ -69,6 +76,10 @@ public class Health : MonoBehaviour {
     private void Update()
     {
         HitColor();
+        if (isPlayer)
+        {
+            healthText.text = ("HEALTH"+health);
+        }
     }
 
     private void HitColor()
