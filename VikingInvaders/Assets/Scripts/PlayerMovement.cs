@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour {
     public float jump;
     private bool isGrounded;
     public GameObject ammo;
+    public GameObject ammo2;
     private int count;
+    public bool tripleShot;
+
 
     // Use this for initialization
     void Start () {
@@ -45,6 +48,16 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButton("Fire1")&count>35)
         {
             Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+
+            
+
+            if (tripleShot)
+            {
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+            }
+                
+            
             count = 0;
         }
 

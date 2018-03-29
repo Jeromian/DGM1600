@@ -43,7 +43,7 @@ public class BossMovement : MonoBehaviour {
         {
             rand = Random.Range(1,100);
 
-            if (rand < 30)
+            if (rand < 50)
             {
                 Instantiate(ammo1, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
             }
