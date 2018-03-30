@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/Sceens/LevelBoss.unity
-=======
-- path: Assets/Sceens/UberBoss.unity
->>>>>>> Stashed changes
+- path: Assets/Sceens/WIN.unity
   isLoaded: 1
   isActive: 1

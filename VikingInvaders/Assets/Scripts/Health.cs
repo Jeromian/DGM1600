@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour {
 
     public int health;
-<<<<<<< Updated upstream
     public ParticleSystem deathParticle;
     public GameObject deathReward;
-=======
-    public GameObject deathParticle;
->>>>>>> Stashed changes
     public bool isCannonBalled;
     public bool isPlayer;
     public bool colourChangeCollision = false;
@@ -58,21 +54,12 @@ public class Health : MonoBehaviour {
         
         if (health <= 0)
         {
-<<<<<<< Updated upstream
             //Instantiate(deathParticle, gameObject.transform.position,Quaternion.identity);
             if (deathReward != null)
             {
                 Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
             }
         Destroy(gameObject);
-=======
-            if (deathParticle != null)
-            {
-                Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
-            }
-            
-            Destroy(gameObject);
->>>>>>> Stashed changes
             GameManager.vikingCount--;
             if (GameManager.vikingCount == 0)
             {
@@ -89,10 +76,14 @@ public class Health : MonoBehaviour {
     private void Update()
     {
         HitColor();
-        if (isPlayer)
+       /* if (isPlayer)
         {
             healthText.text = ("HEALTH"+health);
-        }
+            if (FindObjectOfType<PowerUp>().powerGet)
+            {
+                health++;
+            }
+        }*/
     }
 
     private void HitColor()

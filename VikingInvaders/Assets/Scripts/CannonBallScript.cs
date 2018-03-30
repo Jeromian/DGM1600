@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CannonBallScript : MonoBehaviour {
 
-    private int brickCount;
+
 	
 	void Start () {
 		
@@ -12,7 +12,7 @@ public class CannonBallScript : MonoBehaviour {
 
     private void Awake()
     {
-        brickCount++;
+
     }
 
     // Update is called once per frame

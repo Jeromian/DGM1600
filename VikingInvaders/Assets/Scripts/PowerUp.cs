@@ -9,14 +9,17 @@ public class PowerUp : MonoBehaviour {
     public Power PowerUpType;
     public SpriteRenderer rend;
     public Sprite[] images;
+    private GameObject player;
+    public bool powerGet;
 
 	// Use this for initialization
 	void Start ()
     {
 
         rend=GetComponent<SpriteRenderer>();
+        player = FindObjectOfType<Health>().gameObject;
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,4 +37,21 @@ public class PowerUp : MonoBehaviour {
         }
 		
 	}
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.transform.tag == "Player")
+        {
+            powerGet = true;
+            //Destroy(gameObject);
+        }
+
+        else
+        {
+            powerGet = false;
+        }
+
+    }
+
 }
