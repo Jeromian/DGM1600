@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour {
     public float speed;
     public GameObject ammo;
     private int count;
+    public AudioClip fireSound;
 
     private void Start()
     {
@@ -40,7 +41,8 @@ public class EnemyMovement : MonoBehaviour {
         if (count > 130)
         {
            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-1,0), Quaternion.identity);
-           count = 0;
+            AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
+            count = 0;
         }
 
         count++;

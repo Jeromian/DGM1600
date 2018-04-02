@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject ammo2;
     private int count;
     public bool tripleShot;
+    public AudioClip fireSound;
 
 
     // Use this for initialization
@@ -48,16 +49,13 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButton("Fire1")&count>35)
         {
             Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
-
-            
-
             if (tripleShot)
             {
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y + 1, 0), Quaternion.identity);
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
             }
-                
-            
+            AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
+
             count = 0;
         }
 

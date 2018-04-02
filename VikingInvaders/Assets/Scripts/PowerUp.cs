@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class PowerUp : MonoBehaviour {
 
-    public enum Power { Health, Triple,Crate};
+    public enum Power { Health, Triple, Crate};
     public Power PowerUpType;
     public SpriteRenderer rend;
     public Sprite[] images;
@@ -17,7 +17,6 @@ public class PowerUp : MonoBehaviour {
     {
 
         rend=GetComponent<SpriteRenderer>();
-        player = FindObjectOfType<Health>().gameObject;
 
     }
 	
@@ -38,20 +37,24 @@ public class PowerUp : MonoBehaviour {
 		
 	}
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.transform.tag == "Player")
         {
-            powerGet = true;
-            //Destroy(gameObject);
+            switch (PowerUpType)
+            {
+                case Power.Health:
+                    collision.GetComponent<Health>().IncrementHealth(1);
+                    break;
+                case Power.Triple:
+                    collision.GetComponent<PlayerMovement>().tripleShot = true;
+                    break;
+                case Power.Crate:
+                    collision.GetComponent<Health>().IncrementHealth(-1);
+                    break;
+            }
+            Destroy(gameObject);
         }
-
-        else
-        {
-            powerGet = false;
-        }
-
     }
 
 }

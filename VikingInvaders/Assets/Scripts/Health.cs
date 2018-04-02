@@ -7,12 +7,17 @@ public class Health : MonoBehaviour {
 
     public int health;
     public ParticleSystem deathParticle;
-    public GameObject deathReward;
-    public bool isCannonBalled;
+    private GameObject deathReward;
+    public GameObject[] drops;
+    public int rand;
     public bool isPlayer;
+    public bool justAmmo;
     public bool colourChangeCollision = false;
     public float count;
     public Text healthText;
+    public AudioClip hitSound;
+
+
     private void Awake()
     {
         if (!isPlayer)
@@ -25,24 +30,14 @@ public class Health : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
 
         if (collision.transform.tag == "CannonBall")
-        {
-            isCannonBalled = true;
-        }
-
-        else
-        {
-            isCannonBalled = false;
-        }
-
-        if (isCannonBalled)
         {
             health--;
 
             if (this.transform.tag != "CannonBall")
             {
+                AudioSource.PlayClipAtPoint(hitSound, new Vector3(0, 0, 0));
                 colourChangeCollision = true;
             }
         }
@@ -54,10 +49,19 @@ public class Health : MonoBehaviour {
         
         if (health <= 0)
         {
-            //Instantiate(deathParticle, gameObject.transform.position,Quaternion.identity);
-            if (deathReward != null)
+            if (justAmmo==false)
             {
-                Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+                if (deathParticle != null)
+                {
+                    ParticleSystem particle = Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
+                    Destroy(particle, particle.main.duration);
+                }
+                if (drops != null)
+                {
+                    rand = Random.Range(0, 2);
+                    deathReward = drops[rand];
+                    Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+                }
             }
         Destroy(gameObject);
             GameManager.vikingCount--;
@@ -91,6 +95,7 @@ public class Health : MonoBehaviour {
         if (colourChangeCollision)
         {
             transform.GetComponent<Renderer>().material.color = Color.red;
+            
         }
         
         if (count > 20)
@@ -101,4 +106,19 @@ public class Health : MonoBehaviour {
         }
         count++;
     }
+
+    public void IncrementHealth(int amount)
+    {
+        health += amount;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }

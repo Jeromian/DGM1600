@@ -108,22 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &127242830 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1002674469227476, guid: 9ee1958df459c4f42be64650d8e615f8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1699781910}
---- !u!114 &127242832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 127242830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf0538e28d4ab2439364b62b1a3b150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &316431241
 Prefab:
   m_ObjectHideFlags: 0
@@ -314,32 +298,6 @@ Prefab:
     - target: {fileID: 4493768648432512, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61985390701013836, guid: 9ee1958df459c4f42be64650d8e615f8,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1111972501630958, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1111972501630958, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195171992009348, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195171992009348, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 61551890039020414, guid: 9ee1958df459c4f42be64650d8e615f8,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ee1958df459c4f42be64650d8e615f8, type: 2}

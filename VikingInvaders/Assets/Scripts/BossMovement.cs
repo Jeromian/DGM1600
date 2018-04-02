@@ -11,6 +11,7 @@ public class BossMovement : MonoBehaviour {
     public GameObject ammo2;
     private int count;
     public int rand;
+    public AudioClip fireSound;
 
     private void Start()
     {
@@ -54,7 +55,7 @@ public class BossMovement : MonoBehaviour {
             }
 
             Instantiate(ammo2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 2, 0), Quaternion.identity);
-
+            AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
             count = 0;
         }
 
