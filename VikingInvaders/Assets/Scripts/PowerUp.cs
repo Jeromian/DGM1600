@@ -12,12 +12,9 @@ public class PowerUp : MonoBehaviour {
     private GameObject player;
     public bool powerGet;
 
-	// Use this for initialization
 	void Start ()
     {
-
         rend=GetComponent<SpriteRenderer>();
-
     }
 	
 	// Update is called once per frame
@@ -55,6 +52,17 @@ public class PowerUp : MonoBehaviour {
             }
             Destroy(gameObject);
         }
+        if (collision.transform.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
+    /*public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }*/
 
 }

@@ -38,7 +38,7 @@ public class EnemyMovement : MonoBehaviour {
             this.gameObject.transform.position = centralPosition;
         }*/
 
-        if (count > 130)
+        if (count > 100)
         {
            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-1,0), Quaternion.identity);
             AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));

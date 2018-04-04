@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject ammo;
     public GameObject ammo2;
     private int count;
+    private int shotWeight;
     public bool tripleShot;
+    public bool fastShot;
     public AudioClip fireSound;
 
 

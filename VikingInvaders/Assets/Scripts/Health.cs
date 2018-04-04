@@ -14,13 +14,12 @@ public class Health : MonoBehaviour {
     public bool justAmmo;
     public bool colourChangeCollision = false;
     public float count;
-    public Text healthText;
     public AudioClip hitSound;
 
 
     private void Awake()
     {
-        if (!isPlayer)
+        if (isPlayer==false)
         {
             GameManager.vikingCount++;
         }
@@ -49,7 +48,7 @@ public class Health : MonoBehaviour {
         
         if (health <= 0)
         {
-            if (justAmmo==false)
+            if (justAmmo==false && collision.transform.tag!="Player")
             {
                 if (deathParticle != null)
                 {
@@ -58,12 +57,24 @@ public class Health : MonoBehaviour {
                 }
                 if (drops != null)
                 {
-                    rand = Random.Range(0, 2);
+                    rand = Random.Range(0, 100);
+                    if (rand < 40)
+                    {
+                        rand = 0;
+                    }
+                    else if (rand >= 40 && rand <= 79)
+                    {
+                        rand = 1;
+                    }
+                    else if (rand >= 80)
+                    {
+                        rand = 2;
+                    }
                     deathReward = drops[rand];
                     Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
                 }
             }
-        Destroy(gameObject);
+            IncrementHealth(-1);
             GameManager.vikingCount--;
             if (GameManager.vikingCount == 0)
             {
@@ -80,14 +91,6 @@ public class Health : MonoBehaviour {
     private void Update()
     {
         HitColor();
-       /* if (isPlayer)
-        {
-            healthText.text = ("HEALTH"+health);
-            if (FindObjectOfType<PowerUp>().powerGet)
-            {
-                health++;
-            }
-        }*/
     }
 
     private void HitColor()

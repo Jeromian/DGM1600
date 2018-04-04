@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
     public static int vikingCount;
+    public Text healthText;
+    private GameObject player;
+
 
     void Awake()
     {
@@ -23,6 +27,10 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+    }
 
     public void LoadLevel(string level)
     {
@@ -42,4 +50,8 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void Update()
+    {
+    //    healthText.text = "Health"+player.GetComponent<Health>().health;
+    }
 }
