@@ -110,12 +110,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   deathParticle: {fileID: 0}
-  deathReward: {fileID: 0}
+  drops: []
+  rand: 0
   isPlayer: 1
+  justAmmo: 0
   colourChangeCollision: 0
   count: 0
-  healthText: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 4249d0fe8bc688849aa78b5b347e4d75, type: 3}
+  hitSound: {fileID: 8300000, guid: 5043bbd794051b14dbf53de913f9dd88, type: 3}
 --- !u!114 &114544351338621112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +133,7 @@ MonoBehaviour:
   ammo: {fileID: 1300500509784726, guid: c7f98e4a4679e694c8472b2ddc76bfb2, type: 2}
   ammo2: {fileID: 1300500509784726, guid: c7f98e4a4679e694c8472b2ddc76bfb2, type: 2}
   tripleShot: 0
+  fastShot: 0
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
 --- !u!212 &212646268283867658
 SpriteRenderer:

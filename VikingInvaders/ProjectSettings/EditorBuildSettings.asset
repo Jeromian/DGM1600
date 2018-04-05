@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: bf500674b0d31bb41a491b536cd625cc
   - enabled: 1
     path: Assets/Sceens/Level02.unity
-    guid: 12c278021a2db6f4c82fabc59266f90d
+    guid: b57dc74b2de373c49afd2be60e82fcfc
   - enabled: 1
     path: Assets/Sceens/LevelBoss.unity
     guid: 5e579dd6fdb363e4588bc0bece7c2b94
@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sceens/Loose.unity
     guid: c3d939ec991db1748b75e8f7e1292a98
+  - enabled: 0
+    path: Assets/Sceens/Level0.unity
+    guid: 12c278021a2db6f4c82fabc59266f90d

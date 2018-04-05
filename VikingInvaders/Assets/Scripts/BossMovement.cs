@@ -10,6 +10,7 @@ public class BossMovement : MonoBehaviour {
     public GameObject ammo1;
     public GameObject ammo2;
     private int count;
+    public int wait;
     public int rand;
     public AudioClip fireSound;
 
@@ -40,7 +41,7 @@ public class BossMovement : MonoBehaviour {
             this.gameObject.transform.position = centralPosition;
         }*/
 
-        if (count > 100)
+        if (count > wait)
         {
             rand = Random.Range(1,100);
 

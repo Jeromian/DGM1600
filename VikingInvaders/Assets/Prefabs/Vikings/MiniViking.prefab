@@ -108,8 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce5d9fc8e7adee499e9da63e97504e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   ammo: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
+  wait: 100
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
 --- !u!114 &114694596733207608
 MonoBehaviour:
@@ -134,8 +135,7 @@ MonoBehaviour:
   justAmmo: 0
   colourChangeCollision: 0
   count: 0
-  healthText: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 4249d0fe8bc688849aa78b5b347e4d75, type: 3}
+  hitSound: {fileID: 8300000, guid: 5043bbd794051b14dbf53de913f9dd88, type: 3}
 --- !u!212 &212032064803186276
 SpriteRenderer:
   m_ObjectHideFlags: 1
