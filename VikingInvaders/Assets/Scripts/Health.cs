@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour {
 
     public int health;
+    public int worthScore;
     public ParticleSystem deathParticle;
     private GameObject deathReward;
     public GameObject[] drops;
-    public int rand;
+    private int rand;
     public bool isPlayer;
     public bool justAmmo;
     public bool colourChangeCollision = false;
@@ -57,18 +58,25 @@ public class Health : MonoBehaviour {
                 }
                 if (drops != null)
                 {
-                    rand = Random.Range(0, 100);
-                    if (rand < 40)
+                    if (drops.Length !=1)
+                    {
+                        rand = Random.Range(0, 100);
+                        if (rand < 40)
+                        {
+                            rand = 0;
+                        }
+                        else if (rand >= 40 && rand <= 79)
+                        {
+                            rand = 1;
+                        }
+                        else if (rand >= 80)
+                        {
+                            rand = 2;
+                        }
+                    }
+                    else
                     {
                         rand = 0;
-                    }
-                    else if (rand >= 40 && rand <= 79)
-                    {
-                        rand = 1;
-                    }
-                    else if (rand >= 80)
-                    {
-                        rand = 2;
                     }
                     deathReward = drops[rand];
                     Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
@@ -76,9 +84,11 @@ public class Health : MonoBehaviour {
             }
             IncrementHealth(-1);
             GameManager.vikingCount--;
+            FindObjectOfType<GameManager>().IncrementScore(worthScore);
             if (GameManager.vikingCount == 0)
             {
                 FindObjectOfType<GameManager>().LoadNextLevel();
+                
             }
             if (isPlayer)
             {

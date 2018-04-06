@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     private GameManager myManager;
 
 
-    void Awake()
+    /*void Awake()
     {
         if (instance == null)           //if instance is not assigned
         {                               //then assign instance to this object
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad(this.gameObject);
-    }
+    }*/
 
     public void Start()
     {
@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour {
 
     public void Update()
     {
-        healthText.text = "Health: "+player.GetComponent<Health>().health;
+        healthText.text = "HP: "+player.GetComponent<Health>().health;
+        scoreText.text = score.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -69,7 +70,5 @@ public class GameManager : MonoBehaviour {
     public  void IncrementScore(int value)
     {
         score += value;
-        scoreText.text = value.ToString();
-
     }
 }

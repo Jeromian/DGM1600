@@ -109,8 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  ammo: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
+  ammo: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
   wait: 100
+  fireDistance: 0
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
 --- !u!114 &114659808888674982
 MonoBehaviour:
@@ -124,11 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  worthScore: 10
   deathParticle: {fileID: 198344990269300612, guid: 3635a56cbd6072a46b563ade3634af27,
     type: 2}
   drops:
   - {fileID: 1533109626809966, guid: b5cc3b28b94e84d4ea4639d0a9bd2880, type: 2}
-  rand: 0
   isPlayer: 0
   justAmmo: 0
   colourChangeCollision: 0

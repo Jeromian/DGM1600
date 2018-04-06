@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour {
     public GameObject ammo;
     private int count;
     public int wait;
+    public int fireDistance;
     public AudioClip fireSound;
 
     private void Start()
@@ -41,7 +42,7 @@ public class EnemyMovement : MonoBehaviour {
 
         if (count > wait)
         {
-           Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-1,0), Quaternion.identity);
+           Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-fireDistance,0), Quaternion.identity);
             AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
             count = 0;
         }
