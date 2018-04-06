@@ -47,7 +47,7 @@ public class PowerUp : MonoBehaviour {
                     collision.GetComponent<PlayerMovement>().tripleShot = true;
                     break;
                 case Power.Crate:
-                    collision.GetComponent<Health>().IncrementHealth(-1);
+                    
                     break;
             }
             Destroy(gameObject);

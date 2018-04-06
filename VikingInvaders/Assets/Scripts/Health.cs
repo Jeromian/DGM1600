@@ -32,7 +32,7 @@ public class Health : MonoBehaviour {
 
         if (collision.transform.tag == "CannonBall")
         {
-            health--;
+            IncrementHealth(-1);
 
             if (this.transform.tag != "CannonBall")
             {
@@ -43,7 +43,7 @@ public class Health : MonoBehaviour {
 
         else if(this.tag == "CannonBall")
         {
-            health--;
+            IncrementHealth(-1);
         }
         
         if (health <= 0)

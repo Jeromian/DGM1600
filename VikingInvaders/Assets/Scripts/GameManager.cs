@@ -9,7 +9,12 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
     public static int vikingCount;
     public Text healthText;
+    public Text scoreText;
     private GameObject player;
+    public int value;
+    private int score;
+    public Color colorTint;
+    private GameManager myManager;
 
 
     void Awake()
@@ -30,6 +35,7 @@ public class GameManager : MonoBehaviour {
     public void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
+        myManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
     }
 
     public void LoadLevel(string level)
@@ -52,6 +58,18 @@ public class GameManager : MonoBehaviour {
 
     public void Update()
     {
-    //    healthText.text = "Health"+player.GetComponent<Health>().health;
+        healthText.text = "Health: "+player.GetComponent<Health>().health;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        
+    }
+
+    public  void IncrementScore(int value)
+    {
+        score += value;
+        scoreText.text = value.ToString();
+
     }
 }
