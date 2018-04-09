@@ -47,7 +47,7 @@ public class PowerUp : MonoBehaviour {
                     collision.GetComponent<PlayerMovement>().tripleShot = true;
                     break;
                 case Power.Crate:
-                    
+                    FindObjectOfType<GameManager>().IncrementScore(1);
                     break;
             }
             Destroy(gameObject);

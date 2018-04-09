@@ -90,10 +90,6 @@ public class Health : MonoBehaviour {
                 FindObjectOfType<GameManager>().LoadNextLevel();
                 
             }
-            if (isPlayer)
-            {
-                FindObjectOfType<GameManager>().LoadLevel("Loose");
-            }
         }
 
     }
@@ -132,6 +128,10 @@ public class Health : MonoBehaviour {
     public void Die()
     {
         Destroy(gameObject);
+        if (isPlayer)
+        {
+            FindObjectOfType<GameManager>().LoadLevel("Loose");
+        }
     }
 
 }

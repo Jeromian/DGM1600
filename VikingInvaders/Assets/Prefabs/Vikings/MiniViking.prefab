@@ -111,6 +111,7 @@ MonoBehaviour:
   speed: 4
   ammo: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
   wait: 100
+  fireDistance: 0.5
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
 --- !u!114 &114694596733207608
 MonoBehaviour:

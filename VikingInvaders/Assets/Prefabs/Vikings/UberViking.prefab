@@ -108,14 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a2d3cdc1ed8d5418d709503b96dbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
+  health: 25
   worthScore: 20
   deathParticle: {fileID: 198344990269300612, guid: 3635a56cbd6072a46b563ade3634af27,
     type: 2}
   drops:
-  - {fileID: 1474504709017590, guid: df6f2ffcd0ea92448bc9a400282cdc57, type: 2}
-  - {fileID: 1986566559243250, guid: 04cdd910c1f94f546b0c0083729c87c1, type: 2}
-  - {fileID: 1303135328285736, guid: a9b6faf04323238478c9e1c0f2330b72, type: 2}
+  - {fileID: 1440963993321868, guid: 641a80c50127f8e449a4fcf5fc9587f5, type: 2}
   isPlayer: 0
   justAmmo: 0
   colourChangeCollision: 0
@@ -133,8 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  ammo1: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
-  ammo2: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
+  ammo1: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
+  ammo2: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
   wait: 100
   rand: 0
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}

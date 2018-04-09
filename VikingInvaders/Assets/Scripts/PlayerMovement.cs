@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool tripleShot;
     public bool fastShot;
     public AudioClip fireSound;
+    public static PlayerMovement instance = null;
 
 
     // Use this for initialization
@@ -30,7 +31,20 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-    
+    void Awake()
+    {
+        if (instance == null)           //if instance is not assigned
+        {                               //then assign instance to this object
+            instance = this;
+        }
+
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);   //then destroy this object
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     void Update () {
         //check for button pushes

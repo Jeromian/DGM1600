@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sceens/LevelBoss.unity
+- path: Assets/Sceens/UberBoss.unity
   isLoaded: 1
   isActive: 1

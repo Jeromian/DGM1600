@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour {
     public GameObject ammo;
     private int count;
     public int wait;
-    public int fireDistance;
+    public float fireDistance;
     public AudioClip fireSound;
 
     private void Start()

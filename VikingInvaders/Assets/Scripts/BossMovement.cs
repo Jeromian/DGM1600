@@ -36,32 +36,37 @@ public class BossMovement : MonoBehaviour {
         }
        /* else
         {
-            centralPosition.x = player.transform.position.x;
-
-            this.gameObject.transform.position = centralPosition;
+            
         }*/
 
         if (count > wait)
         {
-            rand = Random.Range(1,100);
-
-            if (rand < 50)
-            {
-                Instantiate(ammo1, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
-            }
-
-            else
-            {
-                Instantiate(ammo1, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
-            }
-
-            Instantiate(ammo2, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 2, 0), Quaternion.identity);
-            AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
-            count = 0;
+            Shoot();
         }
 
         count++;
 
+    }
+
+    public void Shoot()
+    {
+        if (ammo2 != null)
+        {
+            rand = Random.Range(1, 100);
+
+            if (rand < 50)
+            {
+                Instantiate(ammo2, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
+            }
+
+            else
+            {
+                Instantiate(ammo2, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
+            }
+        }
+            Instantiate(ammo1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 2, 0), Quaternion.identity);
+            AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
+            count = 0;
     }
 
 }
