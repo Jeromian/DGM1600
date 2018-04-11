@@ -121,7 +121,14 @@ public class Health : MonoBehaviour {
         health += amount;
         if (health <= 0)
         {
-            Die();
+            if (isPlayer)
+            {
+                FindObjectOfType<Lives>().IncrementLives(-1);
+            }
+            else
+            {
+                Die();
+            }
         }
     }
 

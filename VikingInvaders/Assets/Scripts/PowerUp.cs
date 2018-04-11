@@ -47,9 +47,14 @@ public class PowerUp : MonoBehaviour {
                     collision.GetComponent<PlayerMovement>().tripleShot = true;
                     break;
                 case Power.Crate:
+                    //collision.GetComponent<Lives>().IncrementLives(1);
                     FindObjectOfType<GameManager>().IncrementScore(1);
                     break;
             }
+            Destroy(gameObject);
+        }
+        else if (collision.transform.tag == "Wall")
+        {
             Destroy(gameObject);
         }
         if (collision.transform.tag == "Wall")
@@ -57,12 +62,5 @@ public class PowerUp : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    /*public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Wall")
-        {
-            Destroy(gameObject);
-        }
-    }*/
 
 }

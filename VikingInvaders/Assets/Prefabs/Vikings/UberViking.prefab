@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
-  worthScore: 20
+  worthScore: 200
   deathParticle: {fileID: 198344990269300612, guid: 3635a56cbd6072a46b563ade3634af27,
     type: 2}
   drops:

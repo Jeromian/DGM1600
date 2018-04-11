@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour {
     public static int vikingCount;
     public Text healthText;
     public Text scoreText;
+    public Text lifeText;
     private GameObject player;
     public int value;
     private int score;
+    private int growScore;
     public Color colorTint;
     private GameManager myManager;
 
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour {
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
         myManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        growScore = score = 0;
     }
 
     public void LoadLevel(string level)
@@ -60,15 +63,17 @@ public class GameManager : MonoBehaviour {
     {
         healthText.text = "HP: "+player.GetComponent<Health>().health;
         scoreText.text = score.ToString();
+        if (growScore>=1000)
+        {
+            player.GetComponent<Lives>().IncrementLives(1);
+            growScore -=1000;
+        }
+        lifeText.text = player.GetComponent<Lives>().lives.ToString();
     }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        
-    }
-
+    
     public  void IncrementScore(int value)
     {
         score += value;
+        growScore += value;
     }
 }
