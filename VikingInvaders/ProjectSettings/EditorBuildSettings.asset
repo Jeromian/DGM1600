@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Sceens/Level01.unity
     guid: bf500674b0d31bb41a491b536cd625cc
   - enabled: 0
-    path: Assets/Sceens/Level02.unity
+    path: 
     guid: b57dc74b2de373c49afd2be60e82fcfc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sceens/MiniBoss.unity
     guid: 7f46a1a6d47ff96479d78365668ff27f
   - enabled: 1

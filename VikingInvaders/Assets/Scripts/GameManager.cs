@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour {
     public Text scoreText;
     public Text lifeText;
     private GameObject player;
-    public int value;
-    private int score;
+    public int score;
     private int growScore;
     public Color colorTint;
     private GameManager myManager;

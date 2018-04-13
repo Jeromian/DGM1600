@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\Lives.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\WinManager.cs" />
     <Compile Include="Assets\Scripts\Zapzap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
