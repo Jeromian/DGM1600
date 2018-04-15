@@ -27,9 +27,9 @@ public class Lives : MonoBehaviour {
         {
             player.GetComponent<Health>().health = 5;
         }
-        if (value > 0)
+        /*if (value > 0)
         {
             AudioSource.PlayClipAtPoint(lifeGet, new Vector3(0, 0, 0));
-        }
+        }*/
     }
 }

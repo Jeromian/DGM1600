@@ -62,11 +62,7 @@ public class GameManager : MonoBehaviour {
     {
         healthText.text = "HP: "+player.GetComponent<Health>().health;
         scoreText.text = score.ToString();
-        if (growScore>=1000)
-        {
-            player.GetComponent<Lives>().IncrementLives(1);
-            growScore -=1000;
-        }
+        
         lifeText.text = player.GetComponent<Lives>().lives.ToString();
     }
     
@@ -74,5 +70,10 @@ public class GameManager : MonoBehaviour {
     {
         score += value;
         growScore += value;
+        if (growScore >= 1000)
+        {
+            player.GetComponent<Lives>().IncrementLives(1);
+            growScore -= 1000;
+        }
     }
 }
