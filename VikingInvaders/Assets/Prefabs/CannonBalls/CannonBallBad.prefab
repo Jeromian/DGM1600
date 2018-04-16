@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212123167368605016}
   - component: {fileID: 70207602180204110}
   - component: {fileID: 50593408090737346}
-  - component: {fileID: 114564592123872304}
+  - component: {fileID: 114346220378804288}
   m_Layer: 0
   m_Name: CannonBallBad
   m_TagString: CannonBall
@@ -193,7 +193,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0
   m_Autodestruct: 1
---- !u!114 &114564592123872304
+--- !u!114 &114346220378804288
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -201,19 +201,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1402455522396344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a2d3cdc1ed8d5418d709503b96dbb1, type: 3}
+  m_Script: {fileID: 11500000, guid: e4af184e2300dea49ad5bda60a4418f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  deathParticle: {fileID: 0}
-  drops: []
-  rand: 0
-  isPlayer: 0
-  justAmmo: 1
-  colourChangeCollision: 0
-  count: 0
-  healthText: {fileID: 0}
-  hitSound: {fileID: 0}
 --- !u!212 &212123167368605016
 SpriteRenderer:
   m_ObjectHideFlags: 1

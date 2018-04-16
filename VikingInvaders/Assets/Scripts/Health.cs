@@ -18,9 +18,9 @@ public class Health : MonoBehaviour {
     public AudioClip hitSound;
 
 
-    private void Awake()
+    private void Start()
     {
-        if (isPlayer==false)
+        if (this.tag=="Enemy")
         {
             GameManager.vikingCount++;
         }
@@ -34,64 +34,15 @@ public class Health : MonoBehaviour {
         if (collision.transform.tag == "CannonBall")
         {
             IncrementHealth(-1);
-
-            if (this.transform.tag != "CannonBall")
-            {
-                AudioSource.PlayClipAtPoint(hitSound, new Vector3(0, 0, 0));
-                colourChangeCollision = true;
-            }
+            AudioSource.PlayClipAtPoint(hitSound, new Vector3(0, 0, 0));
+            colourChangeCollision = true;
         }
-
-        else if(this.tag == "CannonBall")
+        else if (this.tag == "CannonBall")
         {
             IncrementHealth(-1);
         }
         
-        if (health <= 0)
-        {
-            if (justAmmo==false && collision.transform.tag!="Player")
-            {
-                if (deathParticle != null)
-                {
-                    ParticleSystem particle = Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
-                    Destroy(particle, particle.main.duration);
-                }
-                if (drops != null)
-                {
-                    if (drops.Length !=1)
-                    {
-                        rand = Random.Range(0, 100);
-                        if (rand < 40)
-                        {
-                            rand = 0;
-                        }
-                        else if (rand >= 40 && rand <= 79)
-                        {
-                            rand = 1;
-                        }
-                        else if (rand >= 80)
-                        {
-                            rand = 2;
-                        }
-                    }
-                    else
-                    {
-                        rand = 0;
-                    }
-                    deathReward = drops[rand];
-                    Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
-                }
-            }
-            IncrementHealth(-1);
-            GameManager.vikingCount--;
-            FindObjectOfType<GameManager>().IncrementScore(worthScore);
-            if (GameManager.vikingCount == 0)
-            {
-                FindObjectOfType<GameManager>().LoadNextLevel();
-                
-            }
-        }
-
+       
     }
 
     private void Update()
@@ -121,24 +72,66 @@ public class Health : MonoBehaviour {
         health += amount;
         if (health <= 0)
         {
+            Drop();
             if (isPlayer)
             {
                 FindObjectOfType<Lives>().IncrementLives(-1);
             }
-            else
+            else if (this.tag =="Enemy")
             {
-                Die();
+                
+                GameManager.vikingCount--;
+                FindObjectOfType<GameManager>().IncrementScore(worthScore);
+                
             }
+            Die();
         }
     }
 
     public void Die()
     {
         Destroy(gameObject);
+        if (GameManager.vikingCount == 0)
+        {
+            FindObjectOfType<GameManager>().LoadNextLevel();
+        }
         if (isPlayer)
         {
             FindObjectOfType<GameManager>().LoadLevel("Loose");
         }
     }
 
+    public void Drop()
+    {
+        if (deathParticle != null)
+        {
+            ParticleSystem particle = Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
+            Destroy(particle, particle.main.duration);
+        }
+        if (drops != null)
+        {
+            if (drops.Length != 1)
+            {
+                rand = Random.Range(0, 100);
+                if (rand < 40)
+                {
+                    rand = 0;
+                }
+                else if (rand >= 40 && rand <= 79)
+                {
+                    rand = 1;
+                }
+                else if (rand >= 80)
+                {
+                    rand = 2;
+                }
+            }
+            else
+            {
+                rand = 0;
+            }
+            deathReward = drops[rand];
+            Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+        }
+    }
 }

@@ -48,7 +48,7 @@ public class PowerUp : MonoBehaviour {
                     break;
                 case Power.Crate:
                     //collision.GetComponent<Lives>().IncrementLives(1);
-                    FindObjectOfType<GameManager>().IncrementScore(50);
+                    FindObjectOfType<GameManager>().IncrementScore(Random.Range(1, 50));
                     break;
             }
             Destroy(gameObject);

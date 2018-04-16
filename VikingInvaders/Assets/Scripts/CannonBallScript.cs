@@ -5,18 +5,9 @@ using UnityEngine;
 public class CannonBallScript : MonoBehaviour {
 
 
-	
-	void Start () {
-		
-	}
 
-    private void Awake()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Destroy(this.gameObject);
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

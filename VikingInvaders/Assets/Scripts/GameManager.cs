@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
     {
         healthText.text = "HP: "+player.GetComponent<Health>().health;
         scoreText.text = score.ToString();
-        
+        Debug.Log(vikingCount);
         lifeText.text = player.GetComponent<Lives>().lives.ToString();
     }
     

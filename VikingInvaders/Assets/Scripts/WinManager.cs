@@ -11,15 +11,17 @@ public class WinManager : MonoBehaviour {
     private int finalScore;
     public Text equalsText;
     public Text finalScoreText;
+    private PlayerMovement player;
 
 	// Use this for initialization
 	void Start ()
     {
-        score=FindObjectOfType<GameManager>().score;
+        
+        score =FindObjectOfType<GameManager>().score;
         lives=FindObjectOfType<Lives>().lives;
         finalScore = score * lives;
         equalsText.text = score.ToString() + "points x " + lives.ToString() + "lives = ";
         finalScoreText.text = finalScore.ToString();
-
+        Destroy(FindObjectOfType<Health>().gameObject);
     }
 }
