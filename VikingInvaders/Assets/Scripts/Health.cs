@@ -11,7 +11,6 @@ public class Health : MonoBehaviour {
     private GameObject deathReward;
     public GameObject[] drops;
     private int rand;
-    public bool isPlayer;
     public bool justAmmo;
     public bool colourChangeCollision = false;
     public float count;
@@ -24,13 +23,10 @@ public class Health : MonoBehaviour {
         {
             GameManager.vikingCount++;
         }
-        
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.transform.tag == "CannonBall")
         {
             IncrementHealth(-1);
@@ -41,8 +37,6 @@ public class Health : MonoBehaviour {
         {
             IncrementHealth(-1);
         }
-        
-       
     }
 
     private void Update()
@@ -55,7 +49,6 @@ public class Health : MonoBehaviour {
         if (colourChangeCollision)
         {
             transform.GetComponent<Renderer>().material.color = Color.red;
-            
         }
         
         if (count > 20)
@@ -72,30 +65,29 @@ public class Health : MonoBehaviour {
         health += amount;
         if (health <= 0)
         {
-            Drop();
-            if (isPlayer)
+            
+            if (this.tag == "Player")
             {
                 FindObjectOfType<Lives>().IncrementLives(-1);
             }
             else if (this.tag =="Enemy")
             {
-                
+                Drop();
                 GameManager.vikingCount--;
                 FindObjectOfType<GameManager>().IncrementScore(worthScore);
-                
+                Die();
             }
-            Die();
         }
     }
 
     public void Die()
     {
         Destroy(gameObject);
-        if (GameManager.vikingCount == 0)
+        if (GameManager.vikingCount <= 0)
         {
             FindObjectOfType<GameManager>().LoadNextLevel();
         }
-        if (isPlayer)
+        if (this.tag=="Player")
         {
             FindObjectOfType<GameManager>().LoadLevel("Loose");
         }
@@ -117,11 +109,11 @@ public class Health : MonoBehaviour {
                 {
                     rand = 0;
                 }
-                else if (rand >= 40 && rand <= 79)
+                else if (rand >= 40 && rand <= 89)
                 {
                     rand = 1;
                 }
-                else if (rand >= 80)
+                else if (rand >= 90)
                 {
                     rand = 2;
                 }

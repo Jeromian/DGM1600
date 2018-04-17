@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lives : MonoBehaviour {
 
     public int lives;
+    public int wasLives;
     private GameObject player;
     public AudioClip lifeGet;
 
@@ -18,18 +19,15 @@ public class Lives : MonoBehaviour {
 
     public void IncrementLives(int value)
     {
+        wasLives = lives;
         lives += value;
         if (lives <= 0)
         {
             player.GetComponent<Health>().Die();
         }
-        else if (value < 0)
+        else if (lives < wasLives)
         {
             player.GetComponent<Health>().health = 5;
         }
-        /*if (value > 0)
-        {
-            AudioSource.PlayClipAtPoint(lifeGet, new Vector3(0, 0, 0));
-        }*/
     }
 }

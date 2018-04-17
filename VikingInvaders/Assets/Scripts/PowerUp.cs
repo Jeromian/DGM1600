@@ -31,7 +31,10 @@ public class PowerUp : MonoBehaviour {
                 rend.sprite = images[2];
                 break;
         }
-		
+		if (this.transform.position.y<= -7)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -57,10 +60,7 @@ public class PowerUp : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        if (collision.transform.tag == "Wall")
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
 }
