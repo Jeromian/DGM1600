@@ -130,7 +130,6 @@ MonoBehaviour:
     type: 2}
   drops:
   - {fileID: 1533109626809966, guid: b5cc3b28b94e84d4ea4639d0a9bd2880, type: 2}
-  isPlayer: 0
   justAmmo: 0
   colourChangeCollision: 0
   count: 0

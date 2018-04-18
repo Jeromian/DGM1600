@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     private GameManager myManager;
 
 
-    /*void Awake()
+    void Awake()
     {
         if (instance == null)           //if instance is not assigned
         {                               //then assign instance to this object
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
         }
 
         DontDestroyOnLoad(this.gameObject);
-    }*/
+    }
 
     public void Start()
     {
@@ -62,8 +62,11 @@ public class GameManager : MonoBehaviour {
     {
         healthText.text = "HP: "+player.GetComponent<Health>().health;
         scoreText.text = score.ToString();
-        Debug.Log(vikingCount);
         lifeText.text = player.GetComponent<Lives>().lives.ToString();
+        if (vikingCount <= 0)
+        {
+            LoadNextLevel();
+        }
     }
     
     public  void IncrementScore(int value)
@@ -75,5 +78,11 @@ public class GameManager : MonoBehaviour {
             player.GetComponent<Lives>().IncrementLives(1);
             growScore -= 1000;
         }
+    }
+
+    public void IncrementVikings(int value)
+    {
+        vikingCount += value;
+        Debug.Log(GameManager.vikingCount);
     }
 }

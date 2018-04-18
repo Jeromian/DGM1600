@@ -15,28 +15,30 @@ public class Health : MonoBehaviour {
     public bool colourChangeCollision = false;
     public float count;
     public AudioClip hitSound;
+    private GameObject Collide;
 
 
     private void Start()
     {
         if (this.tag=="Enemy")
         {
-            GameManager.vikingCount++;
+            FindObjectOfType<GameManager>().IncrementVikings(1);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "CannonBall")
+        if (this.tag == "CannonBall")
+        {
+            IncrementHealth(-1);
+        }
+        else if (collision.transform.tag == "CannonBall")
         {
             IncrementHealth(-1);
             AudioSource.PlayClipAtPoint(hitSound, new Vector3(0, 0, 0));
             colourChangeCollision = true;
         }
-        else if (this.tag == "CannonBall")
-        {
-            IncrementHealth(-1);
-        }
+          
     }
 
     private void Update()
@@ -73,8 +75,13 @@ public class Health : MonoBehaviour {
             else if (this.tag =="Enemy")
             {
                 Drop();
-                GameManager.vikingCount--;
                 FindObjectOfType<GameManager>().IncrementScore(worthScore);
+                FindObjectOfType<GameManager>().IncrementVikings(-1);
+                Die();
+            }
+            else
+            {
+                Drop();
                 Die();
             }
         }
@@ -82,26 +89,17 @@ public class Health : MonoBehaviour {
 
     public void Die()
     {
-        Destroy(gameObject);
-        if (GameManager.vikingCount <= 0)
-        {
-            FindObjectOfType<GameManager>().LoadNextLevel();
-        }
         if (this.tag=="Player")
         {
             FindObjectOfType<GameManager>().LoadLevel("Loose");
         }
+        Destroy(gameObject);
     }
 
     public void Drop()
     {
-        if (deathParticle != null)
-        {
             ParticleSystem particle = Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
             Destroy(particle, particle.main.duration);
-        }
-        if (drops != null)
-        {
             if (drops.Length != 1)
             {
                 rand = Random.Range(0, 100);
@@ -122,8 +120,9 @@ public class Health : MonoBehaviour {
             {
                 rand = 0;
             }
-            deathReward = drops[rand];
-            Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
-        }
+                deathReward = drops[rand];
+                Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+              
+        
     }
 }
