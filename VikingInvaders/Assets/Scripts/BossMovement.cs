@@ -13,6 +13,7 @@ public class BossMovement : MonoBehaviour {
     public int wait;
     public int rand;
     public AudioClip fireSound;
+    public bool bothShoot;
 
     private void Start()
     {
@@ -54,12 +55,12 @@ public class BossMovement : MonoBehaviour {
         {
             rand = Random.Range(1, 100);
 
-            if (rand < 50)
+            if (rand < 50||bothShoot)
             {
                 Instantiate(ammo2, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
             }
 
-            else
+            else if (rand > 50 || bothShoot)
             {
                 Instantiate(ammo2, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
             }

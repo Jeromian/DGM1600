@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212063792946209410}
   - component: {fileID: 95559133127916240}
   - component: {fileID: 114659808888674982}
-  - component: {fileID: 114491567376561548}
+  - component: {fileID: 114921227879621932}
   - component: {fileID: 50006417161013004}
   - component: {fileID: 70028167910873506}
   m_Layer: 10
@@ -97,22 +97,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114491567376561548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1440963993321868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ce5d9fc8e7adee499e9da63e97504e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  ammo: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
-  wait: 100
-  fireDistance: 1.5
-  fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
 --- !u!114 &114659808888674982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +118,24 @@ MonoBehaviour:
   colourChangeCollision: 0
   count: 0
   hitSound: {fileID: 8300000, guid: 5043bbd794051b14dbf53de913f9dd88, type: 3}
+--- !u!114 &114921227879621932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440963993321868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc481cc0e3afb044dbfd1fa105cb21bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  ammo1: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
+  ammo2: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
+  wait: 100
+  rand: 0
+  fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
+  bothShoot: 1
 --- !u!212 &212063792946209410
 SpriteRenderer:
   m_ObjectHideFlags: 1

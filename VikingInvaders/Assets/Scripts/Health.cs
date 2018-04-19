@@ -15,8 +15,7 @@ public class Health : MonoBehaviour {
     public bool colourChangeCollision = false;
     public float count;
     public AudioClip hitSound;
-    private GameObject Collide;
-
+    private bool hitPlayer;
 
     private void Start()
     {
@@ -28,6 +27,10 @@ public class Health : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.transform.tag == "Player")
+        {
+            hitPlayer = true;
+        }
         if (this.tag == "CannonBall")
         {
             IncrementHealth(-1);
@@ -100,6 +103,8 @@ public class Health : MonoBehaviour {
     {
             ParticleSystem particle = Instantiate(deathParticle, gameObject.transform.position, Quaternion.identity);
             Destroy(particle, particle.main.duration);
+        if(!hitPlayer)
+        {
             if (drops.Length != 1)
             {
                 rand = Random.Range(0, 100);
@@ -120,9 +125,8 @@ public class Health : MonoBehaviour {
             {
                 rand = 0;
             }
-                deathReward = drops[rand];
-                Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
-              
-        
+            deathReward = drops[rand];
+            Instantiate(deathReward, gameObject.transform.position, Quaternion.identity);
+        }
     }
 }
