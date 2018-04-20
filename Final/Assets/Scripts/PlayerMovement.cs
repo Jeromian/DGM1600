@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour {
                 rigid.AddForce(new Vector2(0, jump), ForceMode2D.Force);
             }
         }
-
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -12,9 +12,10 @@ public class PlayerMovement : MonoBehaviour {
     private Animator anim;
     private SpriteRenderer rend;
     public float jump;
+    private float shootForceX;
+    private float shootForceY;
     private bool isGrounded;
     public GameObject ammo;
-    public GameObject ammo2;
     private int count;
     private int shotWeight;
     public int tripleCount;
@@ -63,14 +64,19 @@ public class PlayerMovement : MonoBehaviour {
             rend.flipX = false;
         }
 
+        float angle = Mathf.Atan2(Camera.main.ScreenToWorldPoint(Input.mousePosition).y - this.transform.position.y, Camera.main.ScreenToWorldPoint(Input.mousePosition).x - this.transform.position.x);
+        Vector2 velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * 20;
+
         if (Input.GetButton("Fire1")&count>35)
         {
-            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+            
+            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity;
+
             if (tripleShot)
             {
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
-                if (tripleCount > 10)
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity; ;
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity; ;
+                if (tripleCount > 8)
                 {
                     tripleShot = false;
                     tripleCount = 0;
@@ -81,9 +87,7 @@ public class PlayerMovement : MonoBehaviour {
 
             count = 0;
         }
-
         count++;
-        
     }
 
 }
