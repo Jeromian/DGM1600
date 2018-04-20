@@ -108,15 +108,15 @@ public class Health : MonoBehaviour {
             if (drops.Length != 1)
             {
                 rand = Random.Range(0, 100);
-                if (rand < 40)
+                if (rand < 25)
                 {
                     rand = 0;
                 }
-                else if (rand >= 40 && rand <= 89)
+                else if (rand >= 25 && rand <= 30)
                 {
                     rand = 1;
                 }
-                else if (rand >= 90)
+                else if (rand >= 31)
                 {
                     rand = 2;
                 }

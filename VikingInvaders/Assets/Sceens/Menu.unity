@@ -208,7 +208,7 @@ Prefab:
     - target: {fileID: 114504882796856210, guid: 1424edc970011a449a40358487e4bd07,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level01
+      value: Instructions
       objectReference: {fileID: 0}
     - target: {fileID: 114728614240333406, guid: 1424edc970011a449a40358487e4bd07,
         type: 2}

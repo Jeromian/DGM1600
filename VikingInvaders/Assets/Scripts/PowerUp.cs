@@ -48,6 +48,7 @@ public class PowerUp : MonoBehaviour {
                     break;
                 case Power.Triple:
                     collision.GetComponent<PlayerMovement>().tripleShot = true;
+                    collision.GetComponent<PlayerMovement>().tripleCount = 0;
                     break;
                 case Power.Crate:
                     //collision.GetComponent<Lives>().IncrementLives(1);

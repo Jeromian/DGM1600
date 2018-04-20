@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject ammo2;
     private int count;
     private int shotWeight;
+    public int tripleCount;
     public bool tripleShot;
     public bool fastShot;
     public AudioClip fireSound;
@@ -69,6 +70,12 @@ public class PlayerMovement : MonoBehaviour {
             {
                 Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
                 Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                if (tripleCount > 10)
+                {
+                    tripleShot = false;
+                    tripleCount = 0;
+                }
+                tripleCount++;
             }
             AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
 
