@@ -10,6 +10,7 @@ public class BossMovement : MonoBehaviour {
     public GameObject ammo1;
     public GameObject ammo2;
     private int count;
+    public float fireDistance;
     public int wait;
     public int rand;
     public AudioClip fireSound;
@@ -57,12 +58,12 @@ public class BossMovement : MonoBehaviour {
 
             if (rand < 50||bothShoot)
             {
-                Instantiate(ammo2, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
+                Instantiate(ammo2, new Vector3(gameObject.transform.position.x - 1, gameObject.transform.position.y - fireDistance, 0), Quaternion.identity);
             }
 
-            else if (rand > 50 || bothShoot)
+            if (rand > 50 || bothShoot)
             {
-                Instantiate(ammo2, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y - 2, 0), Quaternion.identity);
+                Instantiate(ammo2, new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y - fireDistance, 0), Quaternion.identity);
             }
         }
             Instantiate(ammo1, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 2, 0), Quaternion.identity);

@@ -20,7 +20,7 @@ public class WinManager : MonoBehaviour {
         score =FindObjectOfType<GameManager>().score;
         lives=FindObjectOfType<Lives>().lives;
         finalScore = score * lives;
-        equalsText.text = score.ToString() + "points x " + lives.ToString() + "lives = ";
+        equalsText.text = score.ToString() + " points x " + lives.ToString() + " lives = ";
         finalScoreText.text = finalScore.ToString();
         Destroy(FindObjectOfType<Health>().gameObject);
     }

@@ -114,7 +114,6 @@ MonoBehaviour:
     type: 2}
   drops:
   - {fileID: 1440963993321868, guid: 641a80c50127f8e449a4fcf5fc9587f5, type: 2}
-  isPlayer: 0
   justAmmo: 0
   colourChangeCollision: 0
   count: 0
@@ -133,9 +132,11 @@ MonoBehaviour:
   speed: 20
   ammo1: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
   ammo2: {fileID: 1601565932690500, guid: 16ec2703496228e4b85901aa0ba90f1b, type: 2}
+  fireDistance: 2
   wait: 100
   rand: 0
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
+  bothShoot: 0
 --- !u!212 &212536829131181276
 SpriteRenderer:
   m_ObjectHideFlags: 1

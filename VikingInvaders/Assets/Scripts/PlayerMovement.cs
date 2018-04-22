@@ -64,18 +64,15 @@ public class PlayerMovement : MonoBehaviour {
             rend.flipX = false;
         }
 
-        float angle = Mathf.Atan2(Camera.main.ScreenToWorldPoint(Input.mousePosition).y - this.transform.position.y, Camera.main.ScreenToWorldPoint(Input.mousePosition).x - this.transform.position.x);
-        Vector2 velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * 20;
-
         if (Input.GetButton("Fire1")&count>35)
         {
-            
-            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity;
+
+            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>();
 
             if (tripleShot)
             {
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity; ;
-                Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity).GetComponent<Rigidbody2D>().velocity = velocity; ;
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x - .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                Instantiate(ammo, new Vector3(gameObject.transform.position.x + .5f, gameObject.transform.position.y + 1, 0), Quaternion.identity);
                 if (tripleCount > 8)
                 {
                     tripleShot = false;

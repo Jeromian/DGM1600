@@ -411,10 +411,11 @@ MonoBehaviour:
   speed: 7
   ammo1: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
   ammo2: {fileID: 1402455522396344, guid: 1a6f5c50ae57dbf49ac7dd83872c3ac4, type: 2}
-  wait: 75
+  fireDistance: 1
+  wait: 80
   rand: 0
   fireSound: {fileID: 8300000, guid: 06d8918e562632346bc11a1413baf0b6, type: 3}
-  bothShoot: 0
+  bothShoot: 1
 --- !u!114 &1058376136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  worthScore: 200
+  worthScore: 250
   deathParticle: {fileID: 198344990269300612, guid: 3635a56cbd6072a46b563ade3634af27,
     type: 2}
   drops:
