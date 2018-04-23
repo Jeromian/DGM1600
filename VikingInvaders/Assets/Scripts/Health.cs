@@ -54,6 +54,7 @@ public class Health : MonoBehaviour {
         if (colourChangeCollision)
         {
             transform.GetComponent<Renderer>().material.color = Color.red;
+            count++;
         }
         
         if (count > 20)
@@ -62,7 +63,6 @@ public class Health : MonoBehaviour {
             colourChangeCollision = false;
             count = 0;
         }
-        count++;
     }
 
     public void IncrementHealth(int amount)

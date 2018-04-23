@@ -166,7 +166,7 @@ Prefab:
     - target: {fileID: 114544351338621112, guid: 170a4c8173c0cd74e89b782b7a7bf468,
         type: 2}
       propertyPath: tripleShot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1529499069307024, guid: 170a4c8173c0cd74e89b782b7a7bf468, type: 2}
       propertyPath: m_IsActive
@@ -175,7 +175,7 @@ Prefab:
     - target: {fileID: 114544351338621112, guid: 170a4c8173c0cd74e89b782b7a7bf468,
         type: 2}
       propertyPath: fastShot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114783033693071538, guid: 170a4c8173c0cd74e89b782b7a7bf468, type: 2}
