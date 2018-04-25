@@ -11,8 +11,9 @@ public class PowerUp : MonoBehaviour {
     public Sprite[] images;
     private GameObject player;
     public bool powerGet;
+    public AudioClip getSound;
 
-	void Start ()
+    void Start ()
     {
         rend=GetComponent<SpriteRenderer>();
     }
@@ -55,6 +56,7 @@ public class PowerUp : MonoBehaviour {
                     FindObjectOfType<GameManager>().IncrementScore(Random.Range(1, 50));
                     break;
             }
+            AudioSource.PlayClipAtPoint(getSound, new Vector3(0, 0, 0));
             Destroy(gameObject);
         }
         else if (collision.transform.tag == "Wall")

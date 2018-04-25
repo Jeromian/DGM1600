@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour {
 
     public void IncrementVikings(int value)
     {
+        
         vikingCount += value;
         Debug.Log(vikingCount);
     }

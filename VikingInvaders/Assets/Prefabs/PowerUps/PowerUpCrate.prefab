@@ -96,6 +96,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 9adbf3b9ca517bf4b9a507c61eb13d41, type: 3}
   - {fileID: 21300004, guid: 9adbf3b9ca517bf4b9a507c61eb13d41, type: 3}
   powerGet: 0
+  getSound: {fileID: 8300000, guid: dba681a73690a604194b85372e43010b, type: 3}
 --- !u!212 &212760553284076020
 SpriteRenderer:
   m_ObjectHideFlags: 1
