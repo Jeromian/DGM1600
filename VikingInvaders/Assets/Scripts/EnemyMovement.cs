@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour {
             this.gameObject.transform.position = centralPosition;
         }*/
 
-        if (count > wait)
+        while (count > wait)
         {
            Instantiate(ammo, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y-fireDistance,0), Quaternion.identity);
             AudioSource.PlayClipAtPoint(fireSound, new Vector3(0, 0, 0));
